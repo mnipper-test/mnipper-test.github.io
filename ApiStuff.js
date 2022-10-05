@@ -14,7 +14,7 @@ async function getapi(url) {
     if (response) {
         hideloader();
     }
-    show(JSON.parse(data));
+    show(data);
 }
 // Calling that async function
 getapi(api_url);
@@ -47,7 +47,7 @@ function show(data) {
          </tr>`;
     
      //Loop to access all rows 
-    for (let r of data.list) {
+    for (let r of data) {
         tab += `<tr> 
     <td>${r.VendorID} </td>
     <td>${r.tpep_pickup_datetime}</td>
