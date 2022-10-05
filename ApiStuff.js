@@ -14,7 +14,7 @@ async function getapi(url) {
     if (response) {
         hideloader();
     }
-    show(data);
+    show(JSON.parse(data));
 }
 // Calling that async function
 getapi(api_url);
